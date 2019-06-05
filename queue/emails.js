@@ -26,8 +26,8 @@ const uuidv1 = require('uuid/v1');
 var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'ankitgaur573@@gmail.com',
-        pass: 'Honey@008'
+        user: 'youremailid',
+        pass: 'emailpassword'
     }
 });
 
@@ -82,7 +82,7 @@ queue.process('emails', 20, function(job, done){
   let imageToSend = jobId+".png";
 
     var mailOptions = {
-        from: 'ankitgaur573@@gmail.com',
+        from: 'youremailid',
         to: emailTo,
         subject: "Ankit delayed email",
         text: fileName,
